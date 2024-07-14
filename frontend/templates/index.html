@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternity Healthcare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('signup') }}">Signup</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Maternity Healthcare</h1>
+                <p>Your trusted partner in maternal health and wellness</p>
+                <a href="{{ url_for('login') }}" class="cta-button">Get Started</a>
+                <a href="{{ url_for('signup') }}" class="cta-button">Sign Up</a>
+            </div>
+            
+        </div>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-heartbeat"></i>
+            <h2>Comprehensive Care</h2>
+            <p>We provide all the necessary tools and information for a healthy pregnancy.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-comments"></i>
+            <h2>24/7 Support</h2>
+            <p>Our multilingual chatbot is here to help you anytime, anywhere.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-folder-open"></i>
+            <h2>Secure Document Storage</h2>
+            <p>Store and manage all your medical records securely in one place.</p>
+        </div>
+    </section>
+</body>
+</html>

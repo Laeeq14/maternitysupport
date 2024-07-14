@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-image: linear-gradient(to right, #ccb5e5, #a2bdec);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.hero {
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
+    color: #fff;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ba1982;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f71fd3;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.feature i {
+    font-size: 3em;
+    color: #864a88;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #666;
+}

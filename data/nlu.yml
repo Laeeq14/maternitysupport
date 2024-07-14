@@ -1,0 +1,97 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey there
+      - Hi there
+
+  - intent: ask_pregnancy_duration
+    examples: |
+      - How long does a pregnancy last?
+      - What is the duration of pregnancy?
+      - How many weeks is a full-term pregnancy?
+
+  - intent: ask_pregnancy_symptoms
+    examples: |
+      - What are the symptoms of pregnancy?
+      - How do I know if I'm pregnant?
+      - Early signs of pregnancy?
+
+  - intent: ask_pregnancy_care
+    examples: |
+      - How should I take care of myself during pregnancy?
+      - What are some tips for staying healthy during pregnancy?
+      - Pregnancy self-care advice?
+
+  - intent: ask_mood_swings
+    examples: |
+      - Why do pregnant women experience mood swings?
+      - How can mood swings during pregnancy be managed?
+      - Coping strategies for mood swings in pregnancy?
+
+  - intent: first_trimester_symptoms
+    examples: |
+      - What are the common symptoms in the first trimester?
+      - What should I expect in the first trimester?
+      - How will I feel during the first trimester?
+      - Can you tell me about the first trimester symptoms?
+
+  - intent: first_trimester_concerns
+    examples: |
+      - I'm feeling very tired in my first trimester. Is this normal?
+      - I have a lot of nausea. What can I do?
+      - I'm worried about miscarriage. What are the signs?
+      - Can I exercise in the first trimester?
+
+  - intent: second_trimester_symptoms
+    examples: |
+      - What are the common symptoms in the second trimester?
+      - What should I expect in the second trimester?
+      - How will I feel during the second trimester?
+      - Can you tell me about the second trimester symptoms?
+
+  - intent: second_trimester_concerns
+    examples: |
+      - I'm having back pain in my second trimester. Is this normal?
+      - What can I do about heartburn during the second trimester?
+      - I'm worried about gestational diabetes. How can I prevent it?
+      - Can I travel in the second trimester?
+
+  - intent: third_trimester_symptoms
+    examples: |
+      - What are the common symptoms in the third trimester?
+      - What should I expect in the third trimester?
+      - How will I feel during the third trimester?
+      - Can you tell me about the third trimester symptoms?
+
+  - intent: third_trimester_concerns
+    examples: |
+      - I'm having trouble sleeping in my third trimester. What can I do?
+      - What can I do about swelling in my feet and ankles?
+      - I'm worried about labor. What are the signs I should watch for?
+      - Can I have sex in the third trimester?
+
+  - intent: mood_swings
+    examples: |
+      - Why am I experiencing mood swings during pregnancy?
+      - How can I manage mood swings while pregnant?
+      - Is it normal to feel very emotional during pregnancy?
+      - What can I do about pregnancy-related mood swings?
+
+  - intent: emotional_support
+    examples: |
+      - I feel overwhelmed. What should I do?
+      - How can I get emotional support during pregnancy?
+      - I need someone to talk to about my pregnancy worries.
+      - Where can I find support groups for expecting mothers?
+
+  - intent: health_concerns
+    examples: |
+      - I'm worried about my health during pregnancy. What should I do?
+      - How can I stay healthy while pregnant?
+      - What are some common health concerns during pregnancy?
+      - Can you give me tips for a healthy pregnancy?
+

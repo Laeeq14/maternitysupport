@@ -1,0 +1,66 @@
+version: "3.1"
+rules:
+- rule: greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: ask_pregnancy_duration
+  steps:
+    - intent: ask_pregnancy_duration
+    - action: utter_ask_pregnancy_duration
+
+- rule: ask_pregnancy_symptoms
+  steps:
+    - intent: ask_pregnancy_symptoms
+    - action: utter_ask_pregnancy_symptoms
+
+- rule: ask_pregnancy_care
+  steps:
+    - intent: ask_pregnancy_care
+    - action: utter_ask_pregnancy_care
+
+- rule: ask_mood_swings
+  steps:
+    - intent: ask_mood_swings
+    - action: utter_ask_mood_swings
+
+- rule: ask_first_trimester_symptoms
+  steps:
+    - intent: first_trimester_symptoms
+    - action: utter_first_trimester_symptoms
+
+- rule: ask_first_trimester_concerns
+  steps:
+    - intent: first_trimester_concerns
+    - action: utter_first_trimester_concerns
+
+- rule: ask_second_trimester_symptoms
+  steps:
+    - intent: second_trimester_symptoms
+    - action: utter_second_trimester_symptoms
+
+- rule: ask_second_trimester_concerns
+  steps:
+    - intent: second_trimester_concerns
+    - action: utter_second_trimester_concerns
+
+- rule: ask_third_trimester_symptoms
+  steps:
+    - intent: third_trimester_symptoms
+    - action: utter_third_trimester_symptoms
+
+- rule: ask_third_trimester_concerns
+  steps:
+    - intent: third_trimester_concerns
+    - action: utter_third_trimester_concerns
+
+- rule: ask_emotional_support
+  steps:
+    - intent: emotional_support
+    - action: utter_emotional_support
+
+- rule: ask_health_concerns
+  steps:
+    - intent: health_concerns
+    - action: utter_health_concerns

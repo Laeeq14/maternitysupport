@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask duration
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_pregnancy_duration
+      - action: utter_ask_pregnancy_duration
+
+  - story: handle_first_trimester_symptoms
+    steps:
+      - intent: first_trimester_symptoms
+      - action: utter_first_trimester_symptoms
+
+  - story: handle_first_trimester_concerns
+    steps:
+      - intent: first_trimester_concerns
+      - action: utter_first_trimester_concerns
+
+  - story: handle_second_trimester_symptoms
+    steps:
+      - intent: second_trimester_symptoms
+      - action: utter_second_trimester_symptoms
+
+  - story: handle_second_trimester_concerns
+    steps:
+      - intent: second_trimester_concerns
+      - action: utter_second_trimester_concerns
+
+  - story: handle_third_trimester_symptoms
+    steps:
+      - intent: third_trimester_symptoms
+      - action: utter_third_trimester_symptoms
+
+  - story: handle_third_trimester_concerns
+    steps:
+      - intent: third_trimester_concerns
+      - action: utter_third_trimester_concerns
+
+  - story: handle_mood_swings
+    steps:
+      - intent: mood_swings
+      - action: utter_mood_swings
+
+  - story: handle_emotional_support
+    steps:
+      - intent: emotional_support
+      - action: utter_emotional_support
+
+  - story: handle_health_concerns
+    steps:
+      - intent: health_concerns
+      - action: utter_health_concerns

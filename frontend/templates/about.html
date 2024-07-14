@@ -1,0 +1,52 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Maternity Healthcare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-header">
+                <h1>About Maternity Healthcare</h1>
+                <p>Welcome to Maternity Healthcare, where we are dedicated to providing comprehensive healthcare services for expecting mothers and families. Our mission is to ensure the well-being and comfort of mothers throughout their pregnancy journey.</p>
+            </div>
+            
+            <div class="about-cards">
+                <div class="card">
+                    <h2>Our Mission</h2>
+                    <p>At Maternity Healthcare, we strive to offer personalized care and support to every expectant mother, ensuring a safe and comfortable pregnancy journey.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Our Vision</h2>
+                    <p>Our vision is to become a leading healthcare provider in maternity services, recognized for our excellence in patient care and innovative practices.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Our Team</h2>
+                    <p>Meet our dedicated team of obstetricians, nurses, and support staff who are committed to delivering exceptional care and support to our patients.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Maternity Healthcare. All rights reserved.</p>
+    </footer>
+</body>
+</html>

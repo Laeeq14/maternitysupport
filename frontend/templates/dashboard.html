@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Poppins', Arial, sans-serif; /* Use Poppins font */
+            background-color: #f0f0f0; /* Light grey background */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: #ffcccc; /* Light pink header */
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #333;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff99cc; /* Light pink on hover */
+        }
+        main {
+            padding: 20px;
+        }
+        .content-section {
+            background-color: #f9f9f9; /* Light grey background for sections */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .content-section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+        .content-section p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        /* Fun and pastel color icons */
+        .fa {
+            font-size: 36px;
+            margin-right: 15px;
+            color: #ff99cc; /* Light pink */
+        }
+        .fa-heartbeat {
+            color: #99ccff; /* Light blue */
+        }
+        .fa-comments {
+            color: #ffcc99; /* Light orange */
+        }
+        .fa-folder-open {
+            color: #99ff99; /* Light green */
+        }
+        .fa-upload {
+            color: #99ccff; /* Light blue */
+        }
+        .fa-file {
+            color: #ffcc99; /* Light orange */
+        }
+        .fa-tag {
+            color: #ff99cc; /* Light pink */
+        }
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .upload-form label {
+            margin-top: 10px;
+        }
+        .upload-form input,
+        .upload-form button {
+            margin-top: 5px;
+        }
+        .uploaded-documents ul {
+            list-style: none;
+            padding: 0;
+        }
+        .uploaded-documents li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        .uploaded-documents li .icon {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #ff99cc;
+        }
+        .uploaded-documents li .details {
+            flex: 1;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+            .content-section h2 {
+                font-size: 1.5rem;
+            }
+            .content-section p {
+                font-size: 0.9rem;
+            }
+            .fa {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Maternity Healthcare Dashboard</h1>
+            <nav>
+                <a href="{{ url_for('dashboard') }}"><i class="fas fa-heartbeat"></i>Vitals</a>
+                <a href="#" id="chatbot-link"><i class="fas fa-comments"></i>Chatbot</a>
+                <a href="{{ url_for('about') }}"><i class="fas fa-info-circle"></i>About Us</a>
+            </nav>
+        </header>
+        <main>
+            <section id="health-info" class="content-section">
+                <h2><i class="fas fa-heartbeat"></i> Vital Trends</h2>
+                <p>Update and monitor trends in your vitals</p>
+            </section>
+            <section id="chatbot" class="content-section" style="display:none;">
+                <h2><i class="fas fa-comments"></i> Chatbot</h2>
+                <div id="chatbot-container"></div>
+                <form id="chat-form">
+                    <input type="text" id="user-input" placeholder="Type your message...">
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+            <section id="upload-section" class="content-section">
+                <h2><i class="fas fa-upload"></i> Upload Documents</h2>
+                <form class="upload-form" method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+                    <label for="file"><i class="fas fa-file"></i> Upload Document:</label>
+                    <input type="file" id="file" name="file" required>
+                    <br>
+                    <label for="document_name"><i class="fas fa-tag"></i> Document Name:</label>
+                    <input type="text" id="document_name" name="document_name" required>
+                    <br>
+                    <label for="classification"><i class="fas fa-folder"></i> Classification:</label>
+                    <input type="text" id="classification" name="classification" required>
+                    <br>
+                    <button type="submit"><i class="fas fa-upload"></i> Upload</button>
+                </form>
+            </section>
+            <section id="documents-section" class="content-section uploaded-documents">
+                <h2><i class="fas fa-folder-open"></i> Your Uploaded Documents</h2>
+                {% if documents %}
+                    <ul>
+                        {% for document in documents %}
+                            <li>
+                                <div class="icon"><i class="fas fa-file"></i></div>
+                                <div class="details">
+                                    <strong>Name:</strong> {{ document.name }} <br>
+                                    <strong>Classification:</strong> {{ document.classification }} <br>
+                                    <strong>File:</strong> <a href="{{ url_for('static', filename='uploads/' ~ document.filename) }}" target="_blank">{{ document.filename }}</a>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No documents uploaded yet.</p>
+                {% endif %}
+            </section>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>

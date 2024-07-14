@@ -1,0 +1,80 @@
+version: "3.0"
+
+intents:
+  - greet
+  - ask_pregnancy_duration
+  - ask_pregnancy_symptoms
+  - ask_pregnancy_care
+  - ask_mood_swings
+  - first_trimester_symptoms
+  - first_trimester_concerns
+  - second_trimester_symptoms
+  - second_trimester_concerns
+  - third_trimester_symptoms
+  - third_trimester_concerns
+  - mood_swings
+  - emotional_support
+  - health_concerns
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I help you today?"
+
+  utter_ask_pregnancy_duration:
+    - text: "Pregnancy usually lasts about 40 weeks. The due date is calculated from the first day of your last menstrual period."
+
+  utter_ask_pregnancy_symptoms:
+    - text: "Early signs of pregnancy include missed periods, nausea, fatigue, and breast tenderness. Take a pregnancy test to confirm."
+
+  utter_ask_pregnancy_care:
+    - text: "To stay healthy during pregnancy, eat a balanced diet, take prenatal vitamins, exercise regularly, and get plenty of rest."
+
+  utter_ask_mood_swings:
+    - text: "Mood swings during pregnancy are common due to hormonal changes. It's important to get support and practice self-care."
+
+  utter_first_trimester_symptoms:
+    - text: "In the first trimester, common symptoms include nausea, fatigue, breast tenderness, and frequent urination. Some women also experience mood swings and food cravings."
+
+  utter_first_trimester_concerns:
+    - text: "Feeling tired and nauseous is common in the first trimester. Try to rest and eat small, frequent meals. If you have concerns about miscarriage or exercise, consult your doctor for personalized advice."
+
+  utter_second_trimester_symptoms:
+    - text: "In the second trimester, common symptoms include increased energy, a growing belly, back pain, and heartburn. You might also feel the baby moving."
+
+  utter_second_trimester_concerns:
+    - text: "Back pain and heartburn are common in the second trimester. Try to maintain good posture and eat smaller meals. If you're worried about gestational diabetes or travel, speak with your healthcare provider."
+
+  utter_third_trimester_symptoms:
+    - text: "In the third trimester, common symptoms include trouble sleeping, swelling in your feet and ankles, Braxton Hicks contractions, and frequent urination. You may also feel more tired."
+
+  utter_third_trimester_concerns:
+    - text: "To help with sleep, try using pillows for support. For swelling, elevate your feet and drink plenty of water. If you have concerns about labor or sex in the third trimester, talk to your doctor."
+
+  utter_mood_swings:
+    - text: "Mood swings during pregnancy are common due to hormonal changes. Try to get plenty of rest, eat well, and talk to someone you trust. If mood swings are severe, consult your healthcare provider."
+
+  utter_emotional_support:
+    - text: "It's important to seek emotional support during pregnancy. Talk to your partner, friends, or join a support group for expecting mothers. If you feel overwhelmed, consider speaking with a counselor."
+
+  utter_health_concerns:
+    - text: "To stay healthy during pregnancy, eat a balanced diet, stay hydrated, get regular exercise, and attend all prenatal appointments. If you have specific health concerns, talk to your healthcare provider."
+
+actions:
+  - utter_greet
+  - utter_ask_pregnancy_duration
+  - utter_ask_pregnancy_symptoms
+  - utter_ask_pregnancy_care
+  - utter_ask_mood_swings
+  - utter_first_trimester_symptoms
+  - utter_first_trimester_concerns
+  - utter_second_trimester_symptoms
+  - utter_second_trimester_concerns
+  - utter_third_trimester_symptoms
+  - utter_third_trimester_concerns
+  - utter_mood_swings
+  - utter_emotional_support
+  - utter_health_concerns
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,74 @@
+/* Styles for Index Page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.header {
+    margin: 20px 0;
+}
+
+nav ul.nav-pills li {
+    background-color: #333;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.col-lg-3 {
+    width: 24%;
+    margin-right: 1.333333%;
+}
+
+.col-lg-6 {
+    width: 49%;
+    margin-right: 2%;
+}
+
+.col-lg-12, .col-lg-3, .col-lg-6 {
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.row .col-lg-3:last-child, .row .col-lg-6:last-child {
+    margin-right: 0;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #bbb;
+}
+
+h1 {
+    font-size: 3em;
+    color: #6a11cb;
+}
+
+h4 {
+    color: #6a11cb;
+}
+
+.btn-success {
+    background-color: #6a11cb;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.btn-success:hover {
+    background-color: #2575fc;
+}
+
+.irregular-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
